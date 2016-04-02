@@ -50,3 +50,4 @@ var OneStopTechVidsApp;
     OneStopTechVidsApp.UniqueVideoTitle = UniqueVideoTitle;
     var app = angular.module("techVidsApp", ['ngRoute']);
 })(OneStopTechVidsApp || (OneStopTechVidsApp = {}));
+//# sourceMappingURL=tuServicioApp.js.map
