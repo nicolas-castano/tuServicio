@@ -4,3 +4,12 @@ body {
     background-color: $primary-color;
     font-family: $font;
 }
+
+.mdl-layout {
+    position: fixed;
+    top: 0;
+}
+
+.mdl-layout__header{
+    background-color: $primary-color;
+}

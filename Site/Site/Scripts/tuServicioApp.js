@@ -48,6 +48,6 @@ var OneStopTechVidsApp;
         return UniqueVideoTitle;
     })();
     OneStopTechVidsApp.UniqueVideoTitle = UniqueVideoTitle;
-    var app = angular.module("techVidsApp", ['ngRoute']);
+    var app = angular.module("tuServicioApp", ['ngRoute']);
 })(OneStopTechVidsApp || (OneStopTechVidsApp = {}));
 //# sourceMappingURL=tuServicioApp.js.map
