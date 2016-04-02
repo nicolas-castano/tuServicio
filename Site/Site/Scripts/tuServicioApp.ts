@@ -1,7 +1,4 @@
-﻿/// <reference path="../scripts/typings/angularjs/angular.d.ts" />
-/// <reference path="../scripts/typings/angularjs/angular-route.d.ts" />
-
-module Extensions {
+﻿module Extensions {
 
 }
 
@@ -23,9 +20,6 @@ module OneStopTechVidsApp {
     TechVidsCategoryCtrl.$inject = ['$scope', 'techVidsDataSvc'];
 
     export class TechVidsListCtrl {
-
-
-
     }
 
     TechVidsListCtrl.$inject = ['$scope', '$routeParams', 'techVidsDataSvc'];
@@ -43,5 +37,5 @@ module OneStopTechVidsApp {
     export class UniqueVideoTitle {
     }
 
-    var app = angular.module("techVidsApp", ['ngRoute']);
+    var app = angular.module("tuServicioApp", ['ngRoute']);
 }

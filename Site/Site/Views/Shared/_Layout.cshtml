@@ -6,12 +6,14 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/tuServicioApp.js"></script>
     <script src="~/Scripts/test.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 </head>
-<body ng-app="myApp">
+<body ng-app="tuServicioApp">
     <div></div>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -40,21 +42,6 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-    <script>
-        var app = angular.module('myApp', []);
-        app.controller('CartController', ['$scope', function ($scope) {
-            $scope.items = [
-                { title: 'Paint pots', quantity: 8, price: 3.95 },
-                { title: 'Polka dots', quantity: 17, price: 12.95 },
-                { title: 'Pebbles', quantity: 5, price: 6.95 }
-            ];
-            $scope.remove = function (index) {
-                $scope.items.splice(index, 1);
-            }
-        }]);
-    </script>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

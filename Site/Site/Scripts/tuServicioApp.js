@@ -1,5 +1,3 @@
-/// <reference path="../scripts/typings/angularjs/angular.d.ts" />
-/// <reference path="../scripts/typings/angularjs/angular-route.d.ts" />
 var OneStopTechVidsApp;
 (function (OneStopTechVidsApp) {
     var Config = (function () {
@@ -48,5 +46,5 @@ var OneStopTechVidsApp;
         return UniqueVideoTitle;
     })();
     OneStopTechVidsApp.UniqueVideoTitle = UniqueVideoTitle;
-    var app = angular.module("techVidsApp", ['ngRoute']);
+    var app = angular.module("tuServicioApp", ['ngRoute']);
 })(OneStopTechVidsApp || (OneStopTechVidsApp = {}));
