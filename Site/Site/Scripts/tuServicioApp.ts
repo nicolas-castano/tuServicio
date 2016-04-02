@@ -43,5 +43,5 @@ module OneStopTechVidsApp {
     export class UniqueVideoTitle {
     }
 
-    var app = angular.module("techVidsApp", ['ngRoute']);
+    var app = angular.module("tuServicioApp", ['ngRoute']);
 }
