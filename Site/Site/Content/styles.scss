@@ -1,15 +1,82 @@
 ﻿@import 'variables.scss';
+@import 'phone.scss';
 
 body {
     background-color: $primary-color;
     font-family: $font;
+    min-height: 0;
 }
 
+.red-bkg {
+    background-color: $primary-color;
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+
+    .mdl-textfield__input{
+        border-bottom: 1px solid rgba(255,255,255,.5);
+    }
+
+    .mdl-textfield__label{
+        color: white;
+
+        &:after{
+            background-color: $accent-color;
+        }
+    }
+
+    .mdl-textfield--floating-label.is-focused .mdl-textfield__label, 
+    .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, 
+    .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label{
+        color: $accent-color;
+    }
+
+    .mdl-textfield{
+        width: 340px;
+    }
+
+    form{
+        margin-top: 5%;
+        margin-bottom: 8%;
+
+        input{
+            color: white;
+        }
+    }
+
+    .mdl-button{
+        color: white;
+    }
+
+    ::selection{
+        background: $accent-color;
+        color: $third-color;
+    }
+}
+
+.mdl-button--accent{
+    background-color: $accent-color !important;
+    color: $third-color !important;
+}
+
+/*///////////////// START NAV BAR STYLES /////////////////*/
 .mdl-layout {
     position: fixed;
     top: 0;
+
+    .mdl-layout__header {
+        background-color: $primary-color;
+    }
 }
 
-.mdl-layout__header{
-    background-color: $primary-color;
+.nav-bar {
+    .material-icons {
+        color: rgba(0,0,0,.5);
+    }
+}
+
+/*///////////////// END NAV BAR STYLES /////////////////*/
+
+.logo{
+    width: 100%;
 }
