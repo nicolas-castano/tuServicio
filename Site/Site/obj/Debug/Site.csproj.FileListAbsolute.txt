@@ -159,6 +159,6 @@ C:\Users\Nicolas\Documents\GitHub\tuServicio\tuServicio\Site\Site\bin\Microsoft.
 C:\Users\Nicolas\Documents\GitHub\tuServicio\tuServicio\Site\Site\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Nicolas\Documents\GitHub\tuServicio\tuServicio\Site\Site\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Nicolas\Documents\GitHub\tuServicio\tuServicio\Site\Site\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Nicolas\Documents\GitHub\tuServicio\tuServicio\Site\Site\obj\Debug\Site.csprojResolveAssemblyReference.cache
 C:\Users\Nicolas\Documents\GitHub\tuServicio\tuServicio\Site\Site\obj\Debug\Site.dll
 C:\Users\Nicolas\Documents\GitHub\tuServicio\tuServicio\Site\Site\obj\Debug\Site.pdb
+C:\Users\Nicolas\Documents\GitHub\tuServicio\tuServicio\Site\Site\obj\Debug\Site.csprojResolveAssemblyReference.cache

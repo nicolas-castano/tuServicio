@@ -1,12 +1,22 @@
 ﻿@import 'variables.scss';
 @import 'phone.scss';
 
+/*///////////////// START TAGS STYLES /////////////////*/
 body {
     background-color: $primary-color;
-    font-family: $font;
     min-height: 0;
 }
 
+body,p,h1,h2,h3,h4,h5,h6{
+    font-family: $font;
+}
+
+span{
+    font-size: 0.9rem;
+}
+/*///////////////// END TAGS STYLES /////////////////*/
+
+/*///////////////// START LOGIN-REGISTER-RESET STYLES /////////////////*/
 .red-bkg {
     background-color: $primary-color;
     margin-top: 5%;
@@ -54,10 +64,14 @@ body {
     }
 }
 
-.mdl-button--accent{
-    background-color: $accent-color !important;
-    color: $third-color !important;
+.register{
+    margin-top: 0;
+
+    form{
+        margin-top: 0;
+    }
 }
+/*///////////////// END LOGIN-REGISTER-RESET STYLES /////////////////*/
 
 /*///////////////// START NAV BAR STYLES /////////////////*/
 .mdl-layout {
@@ -74,9 +88,19 @@ body {
         color: rgba(0,0,0,.5);
     }
 }
-
 /*///////////////// END NAV BAR STYLES /////////////////*/
+
+/*///////////////// START GENERIC STYLES /////////////////*/
+.mdl-button--accent{
+    background-color: $accent-color !important;
+    color: $third-color !important;
+}
+
+.display-inline{
+    display: inline;
+}
 
 .logo{
     width: 100%;
 }
+/*///////////////// END GENERIC STYLES /////////////////*/
