@@ -1,0 +1,21 @@
+﻿/*///////////////// FOR PHONES(479) & TABLETS (769) /////////////////*/
+
+@media (max-width: 479px),(max-width: 769px){
+    /*///////////////// START TAGS STYLES /////////////////*/
+    h3{
+        font-size: 2rem;
+    }
+    /*///////////////// END TAGS STYLES /////////////////*/
+
+    /*///////////////// START LOGIN-REGISTER-RESET STYLES /////////////////*/
+    .red-bkg{
+        margin-top: 30%;
+    }
+    /*///////////////// END LOGIN-REGISTER-RESET STYLES /////////////////*/
+
+    /*///////////////// START RESETPASS STYLES /////////////////*/
+    .resetconfirm{
+        margin-top: 50%;
+    }
+    /*///////////////// END RESETPASS STYLES /////////////////*/
+}
