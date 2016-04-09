@@ -13,6 +13,10 @@ body,p,h1,h2,h3,h4,h5,h6{
 span{
     font-size: 0.9rem;
 }
+
+a:hover{
+    text-decoration: none;
+}
 /*///////////////// END TAGS STYLES /////////////////*/
 
 /*///////////////// START LOGIN-REGISTER-RESET STYLES /////////////////*/
@@ -28,6 +32,7 @@ span{
 
     .mdl-textfield__label{
         color: white;
+        font-weight: normal;
 
         &:after{
             background-color: $accent-color;
