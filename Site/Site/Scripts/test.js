@@ -1,9 +1,11 @@
 var Greeter = (function () {
     function Greeter(element) {
         this.element = element;
-        this.element.innerHTML += "The time is: ";
         this.span = document.createElement('span');
-        this.element.appendChild(this.span);
+        if (this.element != null) {
+            this.element.innerHTML += "The time is: ";
+            this.element.appendChild(this.span);
+        }
         this.span.innerText = new Date().toUTCString();
     }
     Greeter.prototype.refresh = function () {
