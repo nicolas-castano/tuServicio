@@ -1,13 +1,21 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>TypeScript HTML App</title>
-</head>
+﻿@{
+    ViewBag.Title = "Buscar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
 <body>
-    <h1>TypeScript HTML App</h1>
-
-    <div id="content"></div>
+    <div class="mdl-grid red-bkg search">
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
+            <div class="mdl-card search-card mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-cell--6-col-tablet mdl-cell--1-offset-tablet">
+                <div class="mdl-cell mdl-cell--1-col search-icon">
+                    <i class="material-icons">search</i>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield search-input mdl-cell mdl-cell--8-col">
+                    <input class="mdl-textfield__input" type="text" id="search" placeholder="Buscar">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

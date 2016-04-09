@@ -110,5 +110,33 @@ span{
 }
 /*///////////////// END RESETPASS STYLES /////////////////*/
 
+/*///////////////// START SEARCH STYLES /////////////////*/
+.search{
+    margin-top: 0;
+    color: $third-color;
 
-@import 'phone.scss';
+    .search-card{
+        min-height: 0;
+        height: 45px;
+        display: block;
+    }
+
+    .search-icon,.search-input{
+        display:inline-block;
+        line-height: 40px;
+    }
+
+    .mdl-textfield{
+        padding: 0;
+        margin: 0;
+        top: -5px;
+        width: 90%;
+
+        .search-input{
+            input{
+                color: $third-color !important;
+            }
+        }
+    }
+}
+/*///////////////// END SEARCH STYLES /////////////////*/
