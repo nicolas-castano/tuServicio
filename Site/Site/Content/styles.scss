@@ -75,6 +75,16 @@ a:hover{
         margin-top: 0;
     }
 }
+
+.g-recaptcha-desktop{
+    margin: 5% 0;
+}
+
+@media (min-width: 840px){
+    .g-recaptcha-desktop{
+        margin-left: 200px !important;
+    }
+}
 /*///////////////// END LOGIN-REGISTER-RESET STYLES /////////////////*/
 
 /*///////////////// START NAV BAR STYLES /////////////////*/

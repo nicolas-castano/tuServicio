@@ -41,8 +41,10 @@
                 </div>
 
                 <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-                    <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet" style="margin: 50px 0;">
-                        ACA DEBE IR EL reCAPTCHA
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-cell--6-col-tablet mdl-cell--2-offset-tablet g-recaptcha-phone g-recaptcha-desktop">
+                            <div class="g-recaptcha" data-sitekey="6Ldy-hwTAAAAAC10o2wGiT57UdK8jRX4TwVrbxSb"></div>
+                        </div>
                     </div>
 
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone mdl-cell--4-col-tablet display-inline">
@@ -55,7 +57,6 @@
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" data-toggle="modal" data-target="#myModal">
                             Registrarse
                         </button>
-                        <div class="g-recaptcha" data-sitekey="6Ldy-hwTAAAAAC10o2wGiT57UdK8jRX4TwVrbxSb"></div>
                     </div>
                 </div>
             </form>
@@ -90,41 +91,3 @@
         modal.find('.modal-body input').val(recipient)
     })
 </script>
-
-@*/////////////// PENDIENTE: LOGIN VIEJO. GONZA CHEQUEA SI SE PUEDE REUTILIZAR ALGO DE LOGICA, SINO BORRARLO. ////////////////*@
-
-
-@*@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-    {
-        @Html.AntiForgeryToken()
-        <h4>Create a new account.</h4>
-        <hr />
-        @Html.ValidationSummary("", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-default" value="Register" />
-            </div>
-        </div>
-    }
-
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-    }*@

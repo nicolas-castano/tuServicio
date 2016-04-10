@@ -33,3 +33,11 @@
     }
     /*///////////////// END SEARCH STYLES /////////////////*/
 }
+
+
+/*///////////////// ONLY FOR PHONES(479) /////////////////*/
+@media (max-width: 479px){
+    .g-recaptcha-phone{
+        margin-left: -6%;
+    }
+}
