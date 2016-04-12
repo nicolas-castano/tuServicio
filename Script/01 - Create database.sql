@@ -4,9 +4,9 @@ GO
 CREATE DATABASE [tuServicio]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'tuServicio', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\tuServicio.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+( NAME = N'tuServicio', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\tuServicio.mdf' , SIZE = 6000KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
-( NAME = N'tuServicio_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\tuServicio_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+( NAME = N'tuServicio_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\tuServicio_log.ldf' , SIZE = 6000KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
 GO
 
 ALTER DATABASE [tuServicio] SET COMPATIBILITY_LEVEL = 120
