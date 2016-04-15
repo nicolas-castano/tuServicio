@@ -9,14 +9,59 @@
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation" >
-                <a class="mdl-navigation__link" href="#"><i class="material-icons">notifications</i></a>
-                <a class="mdl-navigation__link" href="#"><i class="material-icons">favorite</i></a>
-                @*PENDIENTE: Ambos links deben abrir un div que muestre las notificaciones y los favoritos segun corresponda*@
+            <nav class="mdl-navigation">
+                <button class="mdl-button mdl-js-button mdl-button--icon" id="notifications"><i class="material-icons">notifications</i></button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                    for="notifications">
+                    <li class="mdl-menu__item">
+                        <a href="#" class="fav-link">
+                            <div class="mdl-cell--12-col nav-content">
+                                <p class="fav-title">A presupuestar</p>
+                                <div class="fav-description">
+                                    <p class="">Reparacion de lavarropas, secarropas, etc.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+                    <li disabled class="mdl-menu__item">Disabled Action</li>
+                    <li class="mdl-menu__item">Yet Another Action</li>
+                </ul>
+                <button class="mdl-button mdl-js-button mdl-button--icon" id="favorites"><i class="material-icons">favorite</i></button>
+                <ul class="favorites mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                    for="favorites">
+                    @* ///////////////////////////MOCKUPS DE FAVORITOS //////////////////////////*@
+                    <li class="mdl-menu__item">
+                        <a href="#" class="fav-link">
+                            <div class="mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--3-col-tablet nav-tiles">
+                                <img src="~/Content/Mockup_img/washer.jpg" class="tile" />
+                            </div>
+                            <div class="mdl-cell--9-col-desktop mdl-cell--3-col-phone mdl-cell--6-col-tablet nav-content">
+                                <p class="fav-title">A presupuestar</p>
+                                <div class="fav-description">
+                                    <p class="">Reparacion de lavarropas, secarropas, etc.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mdl-menu__item">
+                        <a href="#" class="fav-link">
+                            <div class="mdl-cell--4-col mdl-cell--1-col-phone mdl-cell--3-col-tablet nav-tiles">
+                                <img src="~/Content/Mockup_img/airconditioner.JPG" class="tile"/>
+                            </div>
+                            <div class="mdl-cell--9-col mdl-cell--3-col-phone mdl-cell--6-col-tablet nav-content">
+                                <p class="fav-title">Desde $1500</p>
+                                <div class="fav-description">
+                                    <p class="">Instalacion y reparacion de aire acondicionado para casas y negocios.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
 </div>
-<div class="">
+<div>
     @RenderBody()
 </div>

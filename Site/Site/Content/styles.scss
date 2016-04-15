@@ -13,10 +13,6 @@ body,p,h1,h2,h3,h4,h5,h6{
 span{
     font-size: 0.9rem;
 }
-
-a:hover{
-    text-decoration: none;
-}
 /*///////////////// END TAGS STYLES /////////////////*/
 
 /*///////////////// START LOGIN-REGISTER-RESET STYLES /////////////////*/
@@ -91,15 +87,92 @@ a:hover{
 .mdl-layout {
     position: fixed;
     top: 0;
+    left: 0;
 
     .mdl-layout__header {
         background-color: $primary-color;
+
+        .mdl-layout__header-row{
+             padding: 0 200px 0 200px;
+        }
     }
 }
 
 .nav-bar {
     .material-icons {
         color: rgba(0,0,0,.5);
+    }
+
+    .mdl-navigation{
+        .mdl-button{
+             margin: 1.5rem;
+        }
+
+        .mdl-menu__container{
+            top: 55px !important;
+            right: 181px !important;
+        }
+
+        /*Flecha del contenedor*/
+        .mdl-menu__container::after{
+            content: '';
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-bottom-color: white;
+            position: absolute;
+            top: -19px;
+            right: calc(22% - 12px);
+        }
+    }
+
+    .favorites{
+        .mdl-menu__item{
+            height: 90px;
+            padding: 10px;
+
+            .fav-link{
+                display: block;
+                height: 100%;
+            }
+        }
+
+        .nav-tiles{
+            .tile{
+                width: 70px;
+            }
+        }
+
+        .nav-tiles, .nav-content{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .nav-content{
+            padding: 0 5px 0 5px;
+            margin-left: 15px;
+
+            p{
+                margin: 0;
+                padding: 0;
+            }
+
+            .fav-title{
+                font-size: 1.4em;
+            }
+
+            .fav-description{
+                
+                white-space: normal;
+                color: $third-color;
+                width: 100%;
+                
+                p{
+                    font-size: 0.8em;
+                    line-height: normal;
+                }
+            }
+        }
     }
 }
 /*///////////////// END NAV BAR STYLES /////////////////*/
@@ -126,6 +199,10 @@ a:hover{
 /*///////////////// END RESETPASS STYLES /////////////////*/
 
 /*///////////////// START SEARCH STYLES /////////////////*/
+#search{
+    display: none;
+}
+
 .search{
     margin-top: 0;
     color: $third-color;
@@ -155,3 +232,9 @@ a:hover{
     }
 }
 /*///////////////// END SEARCH STYLES /////////////////*/
+
+/*///////////////// START INDEX STYLES /////////////////*/
+.index{
+    background-color: white;
+}
+/*///////////////// END INDEX STYLES /////////////////*/
