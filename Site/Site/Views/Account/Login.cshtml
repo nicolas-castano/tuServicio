@@ -1,26 +1,24 @@
-﻿@using Site.Models
-@model LoginViewModel
-@{
+﻿@{
     ViewBag.Title = "Iniciar sesión";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="mdl-grid red-bkg">
-    <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
+    <div ng-controller="loginController as vm" class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--2-offset-tablet">
             <img class="logo" src="~/Content/Img/logo_white.svg" />
         </div>
-        <form action="#" method="#" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--4-col-phone mdl-cell--2-offset-tablet">
+        <form ng-sumbit="vm.login()" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--4-col-phone mdl-cell--2-offset-tablet">
             <div class="mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--4-col-phone">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="email" id="email" required>
+                    <input class="mdl-textfield__input" ng-model="vm.username" type="email" id="email" required>
                     <label class="mdl-textfield__label" for="email">Email</label>
                 </div>
             </div>
 
             <div class="mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--4-col-phone">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="password" id="password" required>
+                    <input class="mdl-textfield__input" ng-model="vm.password" type="password" id="password" required>
                     <label class="mdl-textfield__label" for="password">Contraseña</label>
                 </div>
             </div>
