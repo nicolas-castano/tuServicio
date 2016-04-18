@@ -1,10 +1,11 @@
 var tuServicioApp;
 (function (tuServicioApp) {
     var loginController = (function () {
-        function loginController() {
+        function loginController($http) {
+            this.$http = $http;
         }
         loginController.prototype.login = function () {
-            alert('hola miguel desde typescript usuario ' + this.username + ' password ' + this.password);
+            this.$http.get('LogTest', {});
         };
         return loginController;
     }());
@@ -12,4 +13,3 @@ var tuServicioApp;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);
 app.controller('loginController', tuServicioApp.loginController);
-//# sourceMappingURL=tuServicioApp.js.map

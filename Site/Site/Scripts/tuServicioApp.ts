@@ -2,10 +2,10 @@
     export class loginController {
         username: string;
         password: string;
-        constructor() { }
+        constructor(private $http: ng.IHttpService) { }
 
         login() {
-            alert('hola miguel desde typescript usuario ' + this.username + ' password ' + this.password);
+            this.$http.get('LogTest', {});
         }
     }
 }
