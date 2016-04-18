@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+<script>
+    angular.module('LoginModule', []).controller('LoginController', LoginModule.LoginController);
+</script>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+</head>
+
+<body ng-app="LoginModule" ng-controller="LoginController as controller">
+    <form ng-submit="controller.login()" >
+        Enter text and hit enter:
+        <input type="text" ng-model="text" name="text" />
+        <input type="submit" id="submit" value="Submit" />
+        <pre>list={{list}}</pre>
+    </form>
+</body>
+</html>

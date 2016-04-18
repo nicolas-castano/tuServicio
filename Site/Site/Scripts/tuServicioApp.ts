@@ -1,22 +1,14 @@
-﻿/// <reference path="../scripts/typings/angularjs/angular.d.ts" />
-/// <reference path="../scripts/typings/angularjs/angular-route.d.ts" />
-
-module Extensions {
-
-}
-
-module tuServicio {
+﻿module tuServicioApp {
     export class loginController {
-        name: string;
+        username: string;
         password: string;
         constructor() { }
 
         login() {
-            alert('aa');
-            //console.log('Login was clicked, username is ${this.name} and password is ${this.password}');
+            alert('hola miguel desde typescript usuario ' + this.username + ' password ' + this.password);
         }
     }
-
-    var app = angular.module("tuServicioApp", ['ngRoute']);
-    app.controller('loginController', tuServicio.loginController);
 }
+
+var app = angular.module("tuServicioApp", ['ngRoute']);
+app.controller('loginController', tuServicioApp.loginController);

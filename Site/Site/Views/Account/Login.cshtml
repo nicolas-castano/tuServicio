@@ -3,22 +3,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="mdl-grid red-bkg">
-    <div ng-controller="loginController as vm" class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
+<div class="mdl-grid red-bkg" ng-controller="loginController as controller">
+    <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--2-offset-tablet">
             <img class="logo" src="~/Content/Img/logo_white.svg" />
         </div>
-        <form ng-sumbit="vm.login()" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--4-col-phone mdl-cell--2-offset-tablet">
+        <form ng-submit="controller.login()" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--4-col-phone mdl-cell--2-offset-tablet">
             <div class="mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--4-col-phone">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" ng-model="vm.username" type="email" id="email" required>
+                    <input class="mdl-textfield__input" ng-model="controller.username" type="email" id="email" required>
                     <label class="mdl-textfield__label" for="email">Email</label>
                 </div>
             </div>
 
             <div class="mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--4-col-phone">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" ng-model="vm.password" type="password" id="password" required>
+                    <input class="mdl-textfield__input" ng-model="controller.password" type="password" id="password" required>
                     <label class="mdl-textfield__label" for="password">Contraseña</label>
                 </div>
             </div>
@@ -45,56 +45,3 @@
         </div>
     </div>
 </div>
-
-
-@*/////////////// PENDIENTE: LOGIN VIEJO. GONZA CHEQUEA SI SE PUEDE REUTILIZAR ALGO DE LOGICA, SINO BORRARLO. ////////////////*@
-
-
-@*<section id="loginForm">
-        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-        {
-            @Html.AntiForgeryToken()
-            <h4>Use a local account to log in.</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <div class="checkbox">
-                        @Html.CheckBoxFor(m => m.RememberMe)
-                        @Html.LabelFor(m => m.RememberMe)
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Log in" class="btn btn-default" />
-                </div>
-            </div>
-            <p>
-                @Html.ActionLink("Register as a new user", "Register")
-            </p>
-            @* Enable this once you have account confirmation enabled for password reset functionality
-                <p>
-                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                </p>
-        }
-    </section>*@
-
-@section Scripts
-                {
-    @Scripts.Render("~/bundles/jqueryval")
-}
