@@ -8,7 +8,7 @@ var tuServicioApp;
             });
         }
         return Config;
-    }());
+    })();
     tuServicioApp.Config = Config;
     Config.$inject = ['$routeProvider'];
     var loginController = (function () {
@@ -19,9 +19,10 @@ var tuServicioApp;
             this.$http.get('LogTest', {});
         };
         return loginController;
-    }());
+    })();
     tuServicioApp.loginController = loginController;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);
 app.config(tuServicioApp.Config);
 app.controller('loginController', tuServicioApp.loginController);
+//# sourceMappingURL=tuServicioApp.js.map

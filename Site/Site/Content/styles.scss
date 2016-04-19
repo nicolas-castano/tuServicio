@@ -122,14 +122,46 @@ span{
             border-bottom-color: white;
             position: absolute;
             top: -19px;
-            right: calc(22% - 12px);
+            right: calc(20% - 12px);
+        }
+    }
+
+    .nav-tiles{
+        .tile{
+            width: 70px;
+        }
+    }
+
+    .nav-tiles, .nav-content{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .nav-content{
+        padding: 0 5px;
+
+        p{
+            margin: 0;
+            padding: 0;
+        }
+
+        .fav-description{
+            white-space: normal;
+            color: $third-color;
+            width: 100%;
+                
+            p{
+                font-size: 0.8em;
+                line-height: normal;
+            }
         }
     }
 
     .favorites{
         .mdl-menu__item{
-            height: 90px;
+            height: 100%;
             padding: 10px;
+            width: 300px;
 
             .fav-link{
                 display: block;
@@ -137,41 +169,29 @@ span{
             }
         }
 
-        .nav-tiles{
-            .tile{
-                width: 70px;
-            }
+        .fav-title{
+            font-size: 1.4em;
         }
+    }
 
-        .nav-tiles, .nav-content{
-            display: inline-block;
-            vertical-align: middle;
+    .notification{
+        .mdl-menu__item{
+            height: 100%;
+            padding: 8px 0;
+            width: 300px;
+
+            .fav-link{
+                display: block;
+                height: 100%;
+
+                .fav-title{
+                    font-size: 1.1em;
+                }
+            }
         }
 
         .nav-content{
-            padding: 0 5px 0 5px;
-            margin-left: 15px;
-
-            p{
-                margin: 0;
-                padding: 0;
-            }
-
-            .fav-title{
-                font-size: 1.4em;
-            }
-
-            .fav-description{
-                
-                white-space: normal;
-                color: $third-color;
-                width: 100%;
-                
-                p{
-                    font-size: 0.8em;
-                    line-height: normal;
-                }
-            }
+            padding: 0 15px;
         }
     }
 }
@@ -189,6 +209,10 @@ span{
 
 .logo{
     width: 100%;
+}
+
+.unread{
+    background-color: lighten($accent-color, 25%);
 }
 /*///////////////// END GENERIC STYLES /////////////////*/
 

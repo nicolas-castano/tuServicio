@@ -274,3 +274,5 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+Site/.vs/config/applicationhost.config
+Site/.vs/config/applicationhost.config

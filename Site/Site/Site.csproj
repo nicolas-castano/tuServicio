@@ -18,7 +18,7 @@
     <AssemblyName>Site</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -225,8 +225,11 @@
     <Content Include="Content\material.css" />
     <Content Include="Content\material.min.css" />
     <Content Include="Content\mobile.min.css" />
+    <Content Include="Content\Mockup_img\airconditioner.JPG" />
+    <Content Include="Content\Mockup_img\washer.jpg" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\styles.min.css" />
+    <Content Include="Content\tuservicio-styles.min.css" />
     <Content Include="Content\variables.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -259,6 +262,8 @@
     <Content Include="Content\material.min.css.map" />
     <Content Include="Content\mobile.scss" />
     <Content Include="Content\mobile.css.map" />
+    <Content Include="Content\tuservicio-styles.css.map" />
+    <Content Include="Content\tuservicio-styles.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -361,7 +366,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>24800</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/tuServicio</IISUrl>
+          <IISUrl>http://localhost:24800/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
