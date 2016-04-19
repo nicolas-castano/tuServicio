@@ -1,4 +1,15 @@
-﻿module tuServicioApp {
+﻿
+module tuServicioApp {
+    export class Config {
+        constructor($routeProvider: ng.route.IRouteProvider) {
+            $routeProvider.when("/login", {
+                templateUrl: "/Views/Account/Login.html",
+                controller: "loginController"
+            })
+        }
+    }
+
+    Config.$inject = ['$routeProvider'];
     export class loginController {
         username: string;
         password: string;
@@ -11,4 +22,5 @@
 }
 
 var app = angular.module("tuServicioApp", ['ngRoute']);
+app.config(tuServicioApp.Config);
 app.controller('loginController', tuServicioApp.loginController);
