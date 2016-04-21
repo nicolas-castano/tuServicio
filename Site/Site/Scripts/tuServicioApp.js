@@ -2,10 +2,6 @@ var tuServicioApp;
 (function (tuServicioApp) {
     var Config = (function () {
         function Config($routeProvider) {
-            $routeProvider.when("/login", {
-                templateUrl: "/Views/Account/Login.html",
-                controller: "loginController"
-            }).otherwise({ redirectTo: '/login' });
         }
         return Config;
     }());

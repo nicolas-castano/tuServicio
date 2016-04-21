@@ -1,10 +1,7 @@
 ﻿module tuServicioApp {
     export class Config {
         constructor($routeProvider: ng.route.IRouteProvider) {
-            $routeProvider.when("/login", {
-                templateUrl: "/Views/Account/Login.html",
-                controller: "loginController"
-            }).otherwise({ redirectTo: '/login' });
+           
         }
     }
 
