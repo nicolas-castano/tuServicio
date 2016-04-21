@@ -2,6 +2,10 @@ var tuServicioApp;
 (function (tuServicioApp) {
     var Config = (function () {
         function Config($routeProvider) {
+            $routeProvider.otherwise({
+                templateUrl: 'Templates/login.html',
+                controller: loginController
+            });
         }
         return Config;
     }());
@@ -12,7 +16,7 @@ var tuServicioApp;
             this.$http = $http;
         }
         loginController.prototype.login = function () {
-            this.$http.get('LogTest', {});
+            this.$http.get('Authenticate', {});
         };
         return loginController;
     }());

@@ -1,12 +1,7 @@
-﻿@{
-    ViewBag.Title = "Iniciar sesión";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<div class="mdl-grid red-bkg" ng-controller="loginController as controller">
+﻿<div class="mdl-grid red-bkg" ng-controller="loginController as controller">
     <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--2-offset-tablet">
-            <img class="logo" src="~/Content/Img/logo_white.svg" />
+            <img class="logo" src="Content/Img/logo_white.svg" />
         </div>
         <form ng-submit="controller.login()" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--4-col-phone mdl-cell--2-offset-tablet">
             <div class="mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--4-col-phone">

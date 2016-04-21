@@ -1,7 +1,12 @@
 ﻿module tuServicioApp {
     export class Config {
         constructor($routeProvider: ng.route.IRouteProvider) {
-           
+            $routeProvider.otherwise(
+                {
+                    templateUrl: 'Templates/login.html',
+                    controller: loginController
+                }
+            );
         }
     }
 
@@ -12,7 +17,7 @@
         constructor(private $http: ng.IHttpService) { }
 
         login() {
-            this.$http.get('LogTest', {});
+            this.$http.get('Authenticate', {});
         }
     }
 }
