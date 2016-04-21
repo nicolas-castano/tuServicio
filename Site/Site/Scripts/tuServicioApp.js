@@ -5,10 +5,10 @@ var tuServicioApp;
             $routeProvider.when("/login", {
                 templateUrl: "/Views/Account/Login.html",
                 controller: "loginController"
-            });
+            }).otherwise({ redirectTo: '/login' });
         }
         return Config;
-    })();
+    }());
     tuServicioApp.Config = Config;
     Config.$inject = ['$routeProvider'];
     var loginController = (function () {
@@ -19,7 +19,7 @@ var tuServicioApp;
             this.$http.get('LogTest', {});
         };
         return loginController;
-    })();
+    }());
     tuServicioApp.loginController = loginController;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);
