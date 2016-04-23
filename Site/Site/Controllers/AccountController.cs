@@ -1,30 +1,26 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Site.Models;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
+﻿using System.Web.Http;
+using System.Web.Http.Results;
 using System.Web.Mvc;
 
 namespace Site.Controllers
 {
-    [Authorize]
-    public class AccountController : Controller
+    [System.Web.Http.Authorize]
+    public class AccountController : ApiController
     {
         //
         // GET: /Account/Login
-        [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
-        {
-            ViewBag.ReturnUrl = returnUrl;
-            return View();
-        }
+        //[System.Web.Http.AllowAnonymous]
+        //public ActionResult Login(string returnUrl)
+        //{
+        //    ViewBag.ReturnUrl = returnUrl;
+        //    return View();
+        //}
 
-        [HttpGet]
-        [AllowAnonymous]
-        public void LogTest()
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.AllowAnonymous]
+        public IHttpActionResult Authenticate()
         {
+            return new OkResult(new System.Net.Http.HttpRequestMessage());
         }
     }
 }
