@@ -260,5 +260,15 @@ span{
 /*///////////////// START INDEX STYLES /////////////////*/
 .index{
     background-color: white;
+
+    .bg-ts{
+        background-image: url('Img/bg-ts.jpg');
+        background-repeat: no-repeat;
+        background-color: #dc1e48;
+        background-size: cover;
+        width: 100%;
+        height: 326px;
+        padding-top: 64px;
+    }
 }
 /*///////////////// END INDEX STYLES /////////////////*/
