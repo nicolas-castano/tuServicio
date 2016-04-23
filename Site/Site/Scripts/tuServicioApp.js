@@ -2,7 +2,9 @@ var tuServicioApp;
 (function (tuServicioApp) {
     var Config = (function () {
         function Config($routeProvider) {
-            $routeProvider.otherwise({
+            $routeProvider.when('/test', {
+                templateUrl: 'Templates/test.html',
+            }).otherwise({
                 templateUrl: 'Templates/login.html',
                 controller: loginController
             });

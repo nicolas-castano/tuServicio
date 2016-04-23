@@ -1,12 +1,16 @@
 ﻿module tuServicioApp {
     export class Config {
         constructor($routeProvider: ng.route.IRouteProvider) {
-            $routeProvider.otherwise(
+            $routeProvider.when('/test',
+                {
+
+                    templateUrl: 'Templates/test.html',
+                }).otherwise(
                 {
                     templateUrl: 'Templates/login.html',
                     controller: loginController
                 }
-            );
+                );
         }
     }
 
