@@ -2,6 +2,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*el theme-color cambia el color del url box para chrome de android y ios*@
+    <meta name="theme-color" content="#FF1643">
     <title>@ViewBag.Title tuServicio</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -19,7 +21,7 @@
 </head>
 <html>
 <body ng-app="tuServicioApp">
-    <div class="container body-content">
+    <div class="container body-content mdl-layout mdl-js-layout">
         @RenderBody()
     </div>
 </body>

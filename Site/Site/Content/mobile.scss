@@ -56,6 +56,18 @@
         }
     }
     /*///////////////// END SEARCH STYLES /////////////////*/
+
+    /*///////////////// START INDEX STYLES /////////////////*/
+    .index{
+        .bg-ts{
+            margin-top: 7%;
+                    
+            .slogan,.bold{
+                font-size: 35px;
+            }
+        }
+    }
+    /*///////////////// END INDEX STYLES /////////////////*/
 }
 
 
@@ -80,4 +92,16 @@
             }
         }
     }
+
+    /*///////////////// START INDEX STYLES /////////////////*/
+    .index{
+        .bg-ts{
+            margin-top: 15%;
+                    
+            .slogan,.bold{
+                font-size: 25px;
+            }
+        }
+    }
+    /*///////////////// END INDEX STYLES /////////////////*/
 }

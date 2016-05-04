@@ -10,7 +10,7 @@ var tuServicioApp;
             });
         }
         return Config;
-    }());
+    })();
     tuServicioApp.Config = Config;
     Config.$inject = ['$routeProvider'];
     var loginController = (function () {
@@ -21,7 +21,7 @@ var tuServicioApp;
             this.$http.get('Authenticate', {});
         };
         return loginController;
-    }());
+    })();
     tuServicioApp.loginController = loginController;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);
