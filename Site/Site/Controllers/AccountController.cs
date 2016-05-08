@@ -20,7 +20,7 @@ namespace Site.Controllers
         [System.Web.Http.AllowAnonymous]
         public IHttpActionResult Authenticate()
         {
-            return new OkResult(new System.Net.Http.HttpRequestMessage());
+            return Ok();
         }
     }
 }
