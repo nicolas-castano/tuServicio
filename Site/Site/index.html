@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--el theme-color cambia el color del url box para chrome de android y ios*@-->
+    <!--el theme-color cambia el color del url box para chrome de android e ios*@-->
     <meta name="theme-color" content="#FF1643">
     <title>tuServicio</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
@@ -20,25 +20,99 @@
     <script src="Scripts/tuServicioApp.js"></script>
 </head>
 <html>
-<body class="index">
-    <div class="container body-content mdl-layout mdl-js-layout">
-        <header class="bg-ts">
-            <h2 class="slogan">El profesional que buscás,<br /><span class="bold">cuando lo necesitás.</span></h2>
-        </header>
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect fab-fixed" onclick="ABRO_LA_PANTALLA_DE_BUSQUEDA_CON_ID_SEARCH">
-            <i class="material-icons">search</i>
-        </button>
-        <div class="mdl-grid red-bkg search" id="search">
-            <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
-                <div class="mdl-card search-card mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-cell--6-col-tablet mdl-cell--1-offset-tablet">
-                    <div class="mdl-cell mdl-cell--1-col search-icon">
-                        <i class="material-icons">search</i>
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield search-input mdl-cell mdl-cell--8-col">
-                        <input class="mdl-textfield__input" type="text" id="searche-execute" placeholder="Buscar">
-                    </div>
-                </div>
+<body ng-app="tuServicioApp">
+    <div class="mdl-layout--fixed-header">
+        <header class="mdl-layout__header nav-bar">
+            <div class="mdl-layout__header-row">
+                <img src="Content/Img/logo_white.svg" />
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <button class="mdl-button mdl-js-button mdl-button--icon" id="notifications"><i class="material-icons">notifications</i></button>
+                    <ul class="notification mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                        for="notifications">
+                        <!--/////////////////////////// MOCKUPS DE NOTIFICACIONES //////////////////////////-->
+                        <li class="mdl-menu__item mdl-menu__item--full-bleed-divider unread">
+                            <a href="#" class="fav-link">
+                                <div class="mdl-cell--12-col nav-content">
+                                    <p class="fav-title">Respondieron a tu pregunta</p>
+                                    <div class="fav-description">
+                                        <p class="">Reparacion de lavarropas, secarropas, etc.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">
+                            <a href="#" class="fav-link">
+                                <div class="mdl-cell--12-col nav-content">
+                                    <p class="fav-title">Recuerda calificar tu ultimo servicio</p>
+                                    <div class="fav-description">
+                                        <p class="">Instalacion y reparacion de aire acondicionado para casas y negocios.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="mdl-button mdl-js-button mdl-button--icon" id="favorites"><i class="material-icons">favorite</i></button>
+                    <ul class="favorites mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                        for="favorites">
+                        <!--/////////////////////////// MOCKUPS DE FAVORITOS //////////////////////////-->
+                        <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">
+                            <a href="#" class="fav-link">
+                                <div class="mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--3-col-tablet nav-tiles">
+                                    <img src="Content/Mockup_img/washer.jpg" class="tile" />
+                                </div>
+                                <div class="mdl-cell--9-col-desktop mdl-cell--3-col-phone mdl-cell--6-col-tablet nav-content">
+                                    <p class="fav-title">A presupuestar</p>
+                                    <div class="fav-description">
+                                        <p class="">Reparacion de lavarropas, secarropas, etc.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">
+                            <a href="#" class="fav-link">
+                                <div class="mdl-cell--4-col mdl-cell--1-col-phone mdl-cell--3-col-tablet nav-tiles">
+                                    <img src="Content/Mockup_img/airconditioner.JPG" class="tile" />
+                                </div>
+                                <div class="mdl-cell--9-col mdl-cell--3-col-phone mdl-cell--6-col-tablet nav-content">
+                                    <p class="fav-title">Desde $1500</p>
+                                    <div class="fav-description">
+                                        <p class="">Instalacion y reparacion de aire acondicionado para casas y negocios.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+        </header>
+        <div class="fixed-lateral-nav">
+            <ul>
+                <li>
+                    <button class="mdl-button mdl-js-button mdl-button--icon lateral-btn active-section" id="home">
+                        <i class="material-icons">home</i>
+                        <span>Inicio</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="home">
+                        <i class="material-icons">shopping_cart</i>
+                        <span>Compras</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="home">
+                        <i class="material-icons">local_offer</i>
+                        <span>Ventas</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="home">
+                        <i class="material-icons">person</i>
+                        <span>Usuario</span>
+                    </button>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

@@ -1,6 +1,17 @@
 ﻿/*///////////////// FOR PHONES(479) & TABLETS (769) /////////////////*/
 
 @media (max-width: 479px),(max-width: 769px){
+    .g-recaptcha-container{
+        margin-left: 0;
+        margin-right: 0;
+
+        .g-recaptcha-tablet{
+            width: 90%;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
     /*///////////////// START TAGS STYLES /////////////////*/
     h3{
         font-size: 2rem;
@@ -73,8 +84,13 @@
 
 /*///////////////// ONLY FOR PHONES(479) /////////////////*/
 @media (max-width: 479px){
-    .g-recaptcha-phone{
-        margin-left: -6%;
+    .g-recaptcha-container{
+        .g-recaptcha-tablet{
+            width: 85%;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
     }
 
     .nav-bar {
@@ -104,4 +120,29 @@
         }
     }
     /*///////////////// END INDEX STYLES /////////////////*/
+}
+
+
+/*///////////////// ONLY FOR PHONES(<400) /////////////////*/
+@media (max-width: 400px){
+    .g-recaptcha-container{
+        .g-recaptcha-tablet{
+            width: 100%;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
+}
+
+/*///////////////// ONLY FOR SMALLEST PHONES(<320) /////////////////*/
+@media (max-width: 320px){
+    .g-recaptcha-container{
+        .g-recaptcha-tablet{
+            width: 100%;
+            margin-left: -9%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
 }

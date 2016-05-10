@@ -17,7 +17,28 @@
     <script src="../../Scripts/tuServicioApp.js"></script>
 </head>
 <html>
-<body ng-app="tuServicioApp">
-    <div class="container body-content" ng-view />
+<body class="container body-content index" ng-view>
+    <header class="bg-ts">
+        <h2 class="slogan">El profesional que buscás,<br /><span class="bold">cuando lo necesitás.</span></h2>
+    </header>
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect fab-fixed" onclick="ABRO_LA_PANTALLA_DE_BUSQUEDA_CON_ID_SEARCH">
+        <i class="material-icons">search</i>
+    </button>
+    <div class="mdl-grid banner-ads">
+        <!--ACA VA INSERTADO EL BANNER PUBLICITARIO QUE META GOOGLE ALEATORIAMENTE. CUANDO SE PONGA PRODUCTIVO, QUITAR LOS ESTILOS FIJOS-->
+        <p>BANNER PUBLICITARIO</p>
+    </div>
+    <div class="mdl-grid red-bkg search" id="search">
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
+            <div class="mdl-card search-card mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-cell--6-col-tablet mdl-cell--1-offset-tablet">
+                <div class="mdl-cell mdl-cell--1-col search-icon">
+                    <i class="material-icons">search</i>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield search-input mdl-cell mdl-cell--8-col">
+                    <input class="mdl-textfield__input" type="text" id="searche-execute" placeholder="Buscar">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
