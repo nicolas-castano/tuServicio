@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="../../Content/normalize.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/material.min.css" rel="stylesheet" />
+    <link href="../../Content/tuservicio-styles.min.css" rel="stylesheet" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="../../Scripts/jquery-1.10.2.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+    <script src="../../Scripts/material.min.js"></script>
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="../../Scripts/angular-route.min.js"></script>
+    <script src="../../Scripts/tuServicioApp.js"></script>
+</head>
+<html>
+<body class="container body-content index">
+    <div class="mdl-grid red-bkg register">
+        <header class="bg-ts">
+            <h2 class="slogan">El profesional que buscás,<br /><span class="bold">cuando lo necesitás.</span></h2>
+        </header>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect fab-fixed" onclick="ABRO_LA_PANTALLA_DE_BUSQUEDA_CON_ID_SEARCH">
+            <i class="material-icons">search</i>
+        </button>
+        <div class="mdl-grid banner-ads">
+            <!--ACA VA INSERTADO EL BANNER PUBLICITARIO QUE META GOOGLE ALEATORIAMENTE. CUANDO SE PONGA PRODUCTIVO, QUITAR LOS ESTILOS FIJOS-->
+            <p>BANNER PUBLICITARIO</p>
+        </div>
+        <div class="mdl-grid red-bkg search" id="search">
+            <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
+                <div class="mdl-card search-card mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-cell--6-col-tablet mdl-cell--1-offset-tablet">
+                    <div class="mdl-cell mdl-cell--1-col search-icon">
+                        <i class="material-icons">search</i>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield search-input mdl-cell mdl-cell--8-col">
+                        <input class="mdl-textfield__input" type="text" id="searche-execute" placeholder="Buscar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -236,7 +236,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Pages\Account\home.html" />
+    <Content Include="Views\Home\home.html" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -294,16 +294,17 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Index.html" />
-    <Content Include="Templates\Account\login.html" />
-    <Content Include="Templates\Account\register.html" />
-    <Content Include="Templates\Account\resetPassword.html" />
+    <Content Include="Templates\Home\Index.html" />
+    <Content Include="Views\Account\login.html" />
+    <Content Include="Views\Account\register.html" />
+    <Content Include="Views\Account\resetPassword.html" />
     <Content Include="Scripts\tuServicioApp.js.map" />
     <Content Include="Scripts\material.min.js.map" />
     <Content Include="Scripts\loginModule.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Templates\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

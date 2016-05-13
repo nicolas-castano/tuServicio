@@ -3,19 +3,20 @@ var tuServicioApp;
     var Config = (function () {
         function Config($routeProvider) {
             $routeProvider.when('/forgot', {
-                templateUrl: '../../Templates/Account/resetPassword.html',
+                templateUrl: '../../Views/Account/resetPassword.html',
             }).when('/register', {
-                templateUrl: '../../Templates/Account/register.html',
+                templateUrl: '../../Views/Account/register.html',
+            }).when('/home', {
+                templateUrl: '../../Views/Home/home.html',
             }).when('/login', {
-                templateUrl: '../../Templates/Account/login.html',
+                templateUrl: '../../Views/Account/login.html',
                 controller: loginController
             }).otherwise({
-                templateUrl: '../../Templates/Account/login.html',
-                controller: loginController
+                templateUrl: '../../Views/Home/home.html',
             });
         }
         return Config;
-    })();
+    }());
     tuServicioApp.Config = Config;
     Config.$inject = ['$routeProvider'];
     var loginController = (function () {
@@ -26,7 +27,7 @@ var tuServicioApp;
             this.$http.get('Authenticate', {});
         };
         return loginController;
-    })();
+    }());
     tuServicioApp.loginController = loginController;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);

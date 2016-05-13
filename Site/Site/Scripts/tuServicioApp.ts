@@ -3,17 +3,20 @@
         constructor($routeProvider: ng.route.IRouteProvider) {
             $routeProvider.when('/forgot',
                 {
-                    templateUrl: '../../Templates/Account/resetPassword.html',
+                    templateUrl: '../../Views/Account/resetPassword.html',
                 }).when('/register',
                 {
-                    templateUrl: '../../Templates/Account/register.html',
-                }).when('/login', {
-                    templateUrl: '../../Templates/Account/login.html',
+                    templateUrl: '../../Views/Account/register.html',
+                }).when('/home',
+                {
+                    templateUrl: '../../Views/Home/home.html',
+                }).when('/login',
+                {
+                    templateUrl: '../../Views/Account/login.html',
                     controller: loginController
                 }).otherwise(
                 {
-                    templateUrl: '../../Templates/Account/login.html',
-                    controller: loginController
+                    templateUrl: '../../Views/Home/home.html',
                 }
                 );
         }
