@@ -19,11 +19,10 @@
     /*///////////////// END TAGS STYLES /////////////////*/
 
     /*///////////////// START NAV BAR STYLES /////////////////*/
-    .mdl-layout {
-
+    .mdl-layout--fixed-header {
         .mdl-layout__header {
             .mdl-layout__header-row{
-                 padding: 0 30px 0 30px;
+                 padding: 0 5% 0 5%;
             }
         }
     }
@@ -120,6 +119,58 @@
         }
     }
     /*///////////////// END INDEX STYLES /////////////////*/
+
+    /*///////////////// START NAV BAR STYLES /////////////////*/
+    .fixed-lateral-nav{
+        width: 100%;
+        min-height: 54px;
+        max-height: 64px;
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+        display: table;
+
+        ul{
+            margin: 0;
+            bottom: 0;
+            display: table-cell;
+            vertical-align: middle;
+
+            .tab{
+                display: inline;
+                margin: 0 4%;
+
+                .lateral-btn{
+                    i{
+                        color: rgba(0,0,0,.5);
+                    }
+
+                    span{
+                        display: none;
+                    }
+                }
+            }
+
+            /*////////// ACTIVE-SECTION Y LOS ESTILOS QUE ABARCA SOLO DEBEN APLICARSE CUANDO LA PESTAÑA ESTA ACTIVA /////////////*/
+            .active-section{
+                .lateral-btn{
+                    color: $primary-color;
+
+                    i{
+                        color: $primary-color;
+                        top: 35%;
+                    }
+
+                    span{
+                        font-size: 0.8rem;
+                        display: block;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    /*///////////////// END NAV BAR STYLES /////////////////*/
 }
 
 
