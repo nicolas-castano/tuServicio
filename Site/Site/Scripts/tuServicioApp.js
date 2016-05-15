@@ -12,11 +12,11 @@ var tuServicioApp;
                 templateUrl: '../../Views/Account/login.html',
                 controller: loginController
             }).otherwise({
-                templateUrl: '../../Views/Home/home.html',
+                templateUrl: 'Views/Home/home.html',
             });
         }
         return Config;
-    })();
+    }());
     tuServicioApp.Config = Config;
     Config.$inject = ['$routeProvider'];
     var loginController = (function () {
@@ -27,7 +27,7 @@ var tuServicioApp;
             this.$http.get('Authenticate', {});
         };
         return loginController;
-    })();
+    }());
     tuServicioApp.loginController = loginController;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);

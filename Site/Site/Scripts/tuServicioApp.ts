@@ -16,7 +16,7 @@
                     controller: loginController
                 }).otherwise(
                 {
-                    templateUrl: '../../Views/Home/home.html',
+                    templateUrl: 'Views/Home/home.html',
                 }
                 );
         }
