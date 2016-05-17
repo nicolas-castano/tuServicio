@@ -266,6 +266,20 @@ span{
 .mdl-button--fab, .mdl-button--fab:hover, .mdl-button--fab:active, .mdl-button--fab:focus{
     background-color: $accent-color;
 }
+
+.fab-fixed{
+    position: fixed;
+    top: 80%;
+    left: 80%;
+}
+
+.view{
+    background-color: white;
+    width: calc(100% - 84px);
+    margin-top: 4.5%;
+    margin-left: 84px;
+    height: 100%;
+}
 /*///////////////// END GENERIC STYLES /////////////////*/
 
 /*///////////////// START RESETPASS STYLES /////////////////*/
@@ -309,40 +323,40 @@ span{
 }
 /*///////////////// END SEARCH STYLES /////////////////*/
 
-/*///////////////// START INDEX STYLES /////////////////*/
-.index{
-    background-color: white;
+/*///////////////// START HOME STYLES /////////////////*/
+.bg-ts{
+    background: #dc1e48 url('Img/bg-ts.jpg') no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+    color: white;
+    text-align: center;
 
-    .bg-ts{
-        background: #dc1e48 url('Img/bg-ts.jpg') no-repeat;
-        background-size: cover;
-        background-origin: content-box;
-        width: 90%;
-        color: white;
-        text-align: center;
-        margin-top: 4.5%;
-        margin-left: 84px;
-
-        .slogan,.bold{
-            font-size: 56px;
-        }
+    .slogan,.bold{
+        font-size: 56px;
+    }
         
-        .slogan{
-            font-weight: 300;
-            line-height: 1.3;
-            padding: 4% 0;
-            margin: 0;
-        }
-
-        .bold{
-            font-weight: 700;
-        }
+    .slogan{
+        font-weight: 300;
+        line-height: 1.3;
+        padding: 4% 0;
+        margin: 0;
     }
 
-    .fab-fixed{
-        position: fixed;
-        top: 80%;
-        left: 80%;
+    .bold{
+        font-weight: 700;
     }
 }
-/*///////////////// END INDEX STYLES /////////////////*/
+
+.banner-ads{
+    //inicio estilos provisorios//
+    width: 720px;
+    height: 90px;
+    background-color: grey;
+    //fin estilos provisorios//
+    margin: 2% auto 2% auto;
+                
+    p{
+        text-align: center;
+    }
+}
+/*///////////////// END HOME STYLES /////////////////*/

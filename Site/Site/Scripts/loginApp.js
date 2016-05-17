@@ -15,7 +15,7 @@ var loginApp;
             });
         }
         return Config;
-    }());
+    })();
     loginApp.Config = Config;
     Config.$inject = ['$routeProvider'];
     var loginController = (function () {
@@ -27,7 +27,7 @@ var loginApp;
             this.$http.get('../../api/account/Authenticate', {});
         };
         return loginController;
-    }());
+    })();
     loginApp.loginController = loginController;
 })(loginApp || (loginApp = {}));
 var app = angular.module("loginApp", ['ngRoute']);
