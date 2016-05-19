@@ -23,8 +23,7 @@ var loginApp;
             this.$http = $http;
         }
         loginController.prototype.login = function () {
-            alert('submit');
-            this.$http.get('../../api/account/Authenticate', {});
+            this.$http.put('../../api/account/Authenticate', { Email: this.username, Password: this.password });
         };
         return loginController;
     }());

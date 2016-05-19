@@ -1,10 +1,11 @@
-﻿using System.Web.Http;
+﻿using QuantumFactory.tuServicio.Site.Models;
+using System.Web.Http;
 using System.Web.Http.Results;
 using System.Web.Mvc;
 
-namespace Site.Controllers
+namespace QuantumFactory.tuServicio.Site.Controllers
 {
-    [System.Web.Http.Authorize]
+    [Authorize]
     public class AccountController : ApiController
     {
         //
@@ -16,9 +17,9 @@ namespace Site.Controllers
         //    return View();
         //}
 
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.AllowAnonymous]
-        public IHttpActionResult Authenticate()
+        [HttpPut]
+        [AllowAnonymous]
+        public IHttpActionResult Authenticate([FromBody]UserDataModel model)
         {
             return Ok();
         }

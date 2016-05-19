@@ -1,4 +1,9 @@
 ﻿module loginApp {
+    export interface IUserModel extends ng.IScope {
+        Email: string;
+        Password: string;
+    }
+
     export class Config {
         constructor($routeProvider: ng.route.IRouteProvider) {
             $routeProvider.when('/forgot',
@@ -27,8 +32,7 @@
         constructor(private $http: ng.IHttpService) { }
 
         login() {
-            alert('submit');
-            this.$http.get('../../api/account/Authenticate', {});
+            this.$http.put<IUserModel>('../../api/account/Authenticate', { Email: this.username, Password: this.password });
         }
     }
 }
