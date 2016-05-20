@@ -1,5 +1,6 @@
 ﻿using QuantumFactory.tuServicio.Site.Models;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Results;
 using System.Web.Mvc;
 
@@ -17,7 +18,7 @@ namespace QuantumFactory.tuServicio.Site.Controllers
         //    return View();
         //}
 
-        [HttpPut]
+        [HttpPost]
         [AllowAnonymous]
         public IHttpActionResult Authenticate([FromBody]UserDataModel model)
         {

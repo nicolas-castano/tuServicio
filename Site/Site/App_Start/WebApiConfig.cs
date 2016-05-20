@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace QuantumFactory.tuServicio.Site
 {
@@ -10,7 +11,6 @@ namespace QuantumFactory.tuServicio.Site
         public static void Register(HttpConfiguration config)
         {
             config.MapHttpAttributeRoutes();
-
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
