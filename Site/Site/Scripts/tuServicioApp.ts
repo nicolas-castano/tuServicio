@@ -1,4 +1,5 @@
-﻿module tuServicioApp {
+﻿'use strict';
+module tuServicioApp {
     export class Config {
         constructor($routeProvider: ng.route.IRouteProvider) {
             $routeProvider.when('/forgot',
@@ -12,8 +13,8 @@
                     templateUrl: '../../Views/Home/home.html',
                 }).when('/login',
                 {
-                    templateUrl: '../../Views/Account/login.html',
-                    controller: loginController
+                    templateUrl: 'Views/Account/login.html',
+                    controller: authModule.authController
                 }).otherwise(
                 {
                     templateUrl: 'Views/Home/home.html',
@@ -21,19 +22,11 @@
                 );
         }
     }
-
-    Config.$inject = ['$routeProvider'];
-    export class loginController {
-        username: string;
-        password: string;
-        constructor(private $http: ng.IHttpService) { }
-
-        login() {
-            this.$http.get('Authenticate', {});
-        }
-    }
 }
 
 var app = angular.module("tuServicioApp", ['ngRoute']);
+tuServicioApp.Config.$inject = ['$routeProvider'];
+authModule.authController.$inject = ['$http'];
 app.config(tuServicioApp.Config);
-app.controller('loginController', tuServicioApp.loginController);
+app.controller('authController', authModule.authController);
+//app.run(authModule.authController.

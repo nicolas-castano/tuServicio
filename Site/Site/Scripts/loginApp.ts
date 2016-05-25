@@ -1,15 +1,13 @@
-﻿module loginApp {
+﻿/// <reference path="services/authservice.ts" />
+'use strict';
+module loginApp {
     export interface IUserModel extends ng.IScope {
         Email: string;
         Password: string;
     }
 
-    export class AuthFactory {
-       
-    }
-
     export class Config {
-        constructor($routeProvider: ng.route.IRouteProvider, $httpProvider: ng.IHttpProvider) {
+        constructor($routeProvider: ng.route.IRouteProvider) {
             $routeProvider.when('/forgot',
                 {
                     templateUrl: '../../Views/Account/resetPassword.html',
@@ -26,46 +24,26 @@
                     controller: loginController
                 }
                 );
-
-            $httpProvider.interceptors.push(function ($q, $rootScope, $window, $location) {
-                return {
-                    request: function (config) {
-                        return config;
-                    },
-                    requestError: function (rejection) {
-                        return $q.reject(rejection);
-                    },
-                    response: function (response) {
-                        if (response.status == "401") {
-                            $location.path('/login');
-                        }
-
-                        return response;
-                    },
-                    responseError: function (rejection) {
-                        if (rejection.status == "401") {
-                            $location.path('/login');
-                        }
-                        return $q.reject(rejection);
-                    }
-                };
-            });
         }
     }
 
-    Config.$inject = ['$routeProvider', '$httpProvider'];
     export class loginController {
         username: string;
         password: string;
         constructor(private $http: ng.IHttpService) { }
 
         login() {
-            this.$http.post<IUserModel>('../../api/account/Authenticate', { Email: this.username, Password: this.password });
+            this.$http.post<IUserModel>('../../api/account/Authenticate', { Email: this.username, Password: this.password })
+                .success(response => {
+                    // save registration
+                    //this.$window.location.href = '/index.html';
+                    alert('hola miguel, fui y vine');
+                });
         }
     }
 }
 
 var app = angular.module("loginApp", ['ngRoute']);
+loginApp.Config.$inject = ['$routeProvider'];
 app.config(loginApp.Config);
-app.factory(loginApp.AuthFactory);
 app.controller('loginController', loginApp.loginController);

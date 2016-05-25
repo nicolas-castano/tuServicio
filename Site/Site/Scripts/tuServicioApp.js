@@ -1,3 +1,4 @@
+'use strict';
 var tuServicioApp;
 (function (tuServicioApp) {
     var Config = (function () {
@@ -9,8 +10,8 @@ var tuServicioApp;
             }).when('/home', {
                 templateUrl: '../../Views/Home/home.html',
             }).when('/login', {
-                templateUrl: '../../Views/Account/login.html',
-                controller: loginController
+                templateUrl: 'Views/Account/login.html',
+                controller: authModule.authController
             }).otherwise({
                 templateUrl: 'Views/Home/home.html',
             });
@@ -18,19 +19,11 @@ var tuServicioApp;
         return Config;
     }());
     tuServicioApp.Config = Config;
-    Config.$inject = ['$routeProvider'];
-    var loginController = (function () {
-        function loginController($http) {
-            this.$http = $http;
-        }
-        loginController.prototype.login = function () {
-            this.$http.get('Authenticate', {});
-        };
-        return loginController;
-    }());
-    tuServicioApp.loginController = loginController;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);
+tuServicioApp.Config.$inject = ['$routeProvider'];
+authModule.authController.$inject = ['$http'];
 app.config(tuServicioApp.Config);
-app.controller('loginController', tuServicioApp.loginController);
+app.controller('authController', authModule.authController);
+//app.run(authModule.authController. 
 //# sourceMappingURL=tuServicioApp.js.map
