@@ -17,7 +17,7 @@ var tuServicioApp;
             });
         }
         return Config;
-    }());
+    })();
     tuServicioApp.Config = Config;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);

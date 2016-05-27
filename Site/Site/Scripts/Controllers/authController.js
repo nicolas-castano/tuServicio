@@ -13,7 +13,7 @@ var authModule;
             });
         };
         return authController;
-    }());
+    })();
     authModule.authController = authController;
 })(authModule || (authModule = {}));
 //# sourceMappingURL=authController.js.map

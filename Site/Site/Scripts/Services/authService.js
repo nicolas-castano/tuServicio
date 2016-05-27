@@ -7,7 +7,7 @@ var authService;
         authService.prototype.fillAuthData = function () {
         };
         return authService;
-    }());
+    })();
     authService_1.authService = authService;
 })(authService || (authService = {}));
 //# sourceMappingURL=authservice.js.map
