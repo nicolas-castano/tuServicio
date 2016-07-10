@@ -1,11 +1,14 @@
 ﻿'use strict';
 module tuServicioApp {
     export class Config {
-        constructor($routeProvider: ng.route.IRouteProvider) {
-            $routeProvider.when('/forgot',
-                {
-                    templateUrl: '../../Views/Account/resetPassword.html',
-                }).when('/register',
+        constructor($routeProvider: ng.route.IRouteProvider, $location: ng.ILocationProvider) {
+            /*$location.html5Mode({
+                enabled: true,
+                requireBase: false
+            });*/
+            $routeProvider.when('/forgot', {
+                templateUrl: '../../Views/Account/resetPassword.html',
+            }).when('/register',
                 {
                     templateUrl: '../../Views/Account/register.html',
                 }).when('/home',
@@ -13,11 +16,11 @@ module tuServicioApp {
                     templateUrl: '../../Views/Home/home.html',
                 }).when('/login',
                 {
-                    templateUrl: 'Views/Account/login.html',
-                    controller: authModule.authController
+                    templateUrl: '../../Views/Account/login.html',
+                    //     controller: authModule.authController
                 }).otherwise(
                 {
-                    templateUrl: 'Views/Home/home.html',
+                    templateUrl: '../../Views/Home/home.html',
                 }
                 );
         }
@@ -25,8 +28,9 @@ module tuServicioApp {
 }
 
 var app = angular.module("tuServicioApp", ['ngRoute']);
-tuServicioApp.Config.$inject = ['$routeProvider'];
-authModule.authController.$inject = ['$http'];
+app.service('authService', authService.authService);
+tuServicioApp.Config.$inject = ['$routeProvider', '$locationProvider'];
 app.config(tuServicioApp.Config);
+authService.authService.$inject = ['$http'];
+authModule.authController.$inject = ['$scope', '$location', 'authService'];
 app.controller('authController', authModule.authController);
-//app.run(authModule.authController.

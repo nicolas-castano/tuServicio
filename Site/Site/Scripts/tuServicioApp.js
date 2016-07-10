@@ -2,7 +2,11 @@
 var tuServicioApp;
 (function (tuServicioApp) {
     var Config = (function () {
-        function Config($routeProvider) {
+        function Config($routeProvider, $location) {
+            /*$location.html5Mode({
+                enabled: true,
+                requireBase: false
+            });*/
             $routeProvider.when('/forgot', {
                 templateUrl: '../../Views/Account/resetPassword.html',
             }).when('/register', {
@@ -10,20 +14,20 @@ var tuServicioApp;
             }).when('/home', {
                 templateUrl: '../../Views/Home/home.html',
             }).when('/login', {
-                templateUrl: 'Views/Account/login.html',
-                controller: authModule.authController
+                templateUrl: '../../Views/Account/login.html',
             }).otherwise({
-                templateUrl: 'Views/Home/home.html',
+                templateUrl: '../../Views/Home/home.html',
             });
         }
         return Config;
-    })();
+    }());
     tuServicioApp.Config = Config;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);
-tuServicioApp.Config.$inject = ['$routeProvider'];
-authModule.authController.$inject = ['$http'];
+app.service('authService', authService.authService);
+tuServicioApp.Config.$inject = ['$routeProvider', '$locationProvider'];
 app.config(tuServicioApp.Config);
+authService.authService.$inject = ['$http'];
+authModule.authController.$inject = ['$scope', '$location', 'authService'];
 app.controller('authController', authModule.authController);
-//app.run(authModule.authController. 
 //# sourceMappingURL=tuServicioApp.js.map

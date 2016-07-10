@@ -2,18 +2,23 @@
 var authModule;
 (function (authModule) {
     var authController = (function () {
-        function authController($http) {
-            this.$http = $http;
+        function authController($scope, $location, $service) {
+            this.$scope = $scope;
+            this.$location = $location;
+            this.$service = $service;
         }
         authController.prototype.login = function () {
-            this.$http.post('api/account/Authenticate', { Email: this.username, Password: this.password })
-                .success(function (response) {
-                localStorage.setItem('jwt', '1');
-                alert('bienvenido ' + response.Name);
-            });
+            this.$service.login(this.username, this.password);
+            this.$location.url('/home');
+        };
+        authController.prototype.logoff = function () {
+            this.$service.logoff();
+        };
+        authController.prototype.userAuthenticated = function () {
+            return this.$service.userAuthenticated();
         };
         return authController;
-    })();
+    }());
     authModule.authController = authController;
 })(authModule || (authModule = {}));
 //# sourceMappingURL=authController.js.map
