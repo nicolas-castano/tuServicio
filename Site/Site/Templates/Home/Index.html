@@ -29,7 +29,24 @@
                 <img src="../../Content/Img/logo_white.svg" />
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation">
-                    <button ng-show="controller.userAuthenticated();" class="mdl-button mdl-js-button mdl-button--icon" id="notifications"><i class="material-icons">notifications</i></button>
+                    <button ng-show="controller.userAuthenticated();" class="mdl-button mdl-js-button menu-button" id="user-menu">
+                        Nicolas Castano <!--REEMPLAZAR POR DATOS SEGUN EL USUARIO LOGUEADO-->
+                    </button>
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu">
+                        <li class="mdl-menu__item menu-item">
+                            <a href="#">
+                                Mis datos
+                            </a>
+                        </li>
+                        <li class="mdl-menu__item menu-item">
+                            <a href="#">
+                                Cerrar sesión
+                            </a>
+                        </li>
+                    </ul>
+                    <button ng-show="controller.userAuthenticated();" class="mdl-button mdl-js-button mdl-button--icon menu-button" id="notifications">
+                        <i class="material-icons">notifications</i>
+                    </button>
                     <ul class="notification mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                         for="notifications">
                         <!--/////////////////////////// MOCKUPS DE NOTIFICACIONES //////////////////////////-->
@@ -54,7 +71,9 @@
                             </a>
                         </li>
                     </ul>
-                    <button ng-show="controller.userAuthenticated();" class="mdl-button mdl-js-button mdl-button--icon" id="favorites"><i class="material-icons">favorite</i></button>
+                    <button ng-show="controller.userAuthenticated();" class="mdl-button mdl-js-button mdl-button--icon menu-button" id="favorites">
+                        <i class="material-icons">favorite</i>
+                    </button>
                     <ul class="favorites mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                         for="favorites">
                         <!--/////////////////////////// MOCKUPS DE FAVORITOS //////////////////////////-->
