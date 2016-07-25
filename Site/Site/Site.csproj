@@ -247,6 +247,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Controllers\authController.js" />
+    <Content Include="Scripts\Interceptors\AuthInterceptor.js" />
     <Content Include="Scripts\loginApp.js" />
     <Content Include="Scripts\Services\authService.js" />
     <Content Include="Templates\Account\login.html" />
@@ -282,6 +283,7 @@
     <Content Include="Content\tuservicio-styles.css.map" />
     <Content Include="Content\tuservicio-styles.scss" />
     <Content Include="Scripts\Controllers\authController.js.map" />
+    <Content Include="Scripts\Interceptors\AuthInterceptor.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -329,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\Controllers\authController.ts" />
+    <TypeScriptCompile Include="Scripts\Interceptors\AuthInterceptor.ts" />
     <TypeScriptCompile Include="Scripts\loginApp.ts" />
     <TypeScriptCompile Include="Scripts\Services\authService.ts" />
     <TypeScriptCompile Include="Scripts\tuServicioApp.ts" />

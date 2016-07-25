@@ -13,6 +13,7 @@ namespace QuantumFactory.tuServicio.Site
 {
     public class Startup
     {
+        private const string Issuer = "tuServicioTokenProvider";
         public void Configuration(IAppBuilder app)
         {
             // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=316888
@@ -29,16 +30,14 @@ namespace QuantumFactory.tuServicio.Site
             {
                 //For Dev enviroment only (on production should be AllowInsecureHttp = false)
                 AllowInsecureHttp = true,
-                TokenEndpointPath = new PathString("/oauth2/token"),
-                AccessTokenExpireTimeSpan = Timeout.InfiniteTimeSpan,
+                TokenEndpointPath = new PathString("/token"),
+                AccessTokenExpireTimeSpan = new System.TimeSpan(System.DateTime.Now.Ticks).Add(System.TimeSpan.FromMinutes(40)),
                 Provider = new CustomOAuthProvider(),
-                AccessTokenFormat = new CustomJwtFormat("http://jwtauthzsrv.azurewebsites.net")
+                AccessTokenFormat = new CustomJwtFormat(Issuer),
             };
 
             // OAuth 2.0 Bearer Access Token Generation
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
-
-            var issuer = "http://jwtauthzsrv.azurewebsites.net";
             var audience = "099153c2625149bc8ecb3e85e03f0022";
             var secret = TextEncodings.Base64Url.Decode("IxrAjDoa2FqElO7IhrSrUJELhUckePEPVpaePlS_Xaw");
             // Api controllers with an [Authorize] attribute will be validated with JWT
@@ -49,7 +48,7 @@ namespace QuantumFactory.tuServicio.Site
                     AllowedAudiences = new[] { audience },
                     IssuerSecurityTokenProviders = new IIssuerSecurityTokenProvider[]
                     {
-                        new SymmetricKeyIssuerSecurityTokenProvider(issuer, secret)
+                        new SymmetricKeyIssuerSecurityTokenProvider(Issuer, secret)
                     }
                 });
         }

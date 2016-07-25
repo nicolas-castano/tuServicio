@@ -7,30 +7,31 @@
     <title>tuServicio</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="../../Content/normalize.css" rel="stylesheet" />
-    <link href="../../Content/bootstrap.css" rel="stylesheet" />
-    <link href="../../Content/material.min.css" rel="stylesheet" />
-    <link href="../../Content/tuservicio-styles.min.css" rel="stylesheet" />
+    <link href="Content/normalize.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/material.min.css" rel="stylesheet" />
+    <link href="Content/tuservicio-styles.min.css" rel="stylesheet" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="../../Scripts/jquery-1.10.2.js"></script>
-    <script src="../../Scripts/bootstrap.js"></script>
-    <script src="../../Scripts/material.min.js"></script>
-    <script src="../../Scripts/angular.min.js"></script>
-    <script src="../../Scripts/angular-route.min.js"></script>
-    <script src="../../Scripts/Controllers/authController.js"></script>
-    <script src="../../Scripts/Services/authService.js"></script>
-    <script src="../../Scripts/tuServicioApp.js"></script>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/material.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/Controllers/authController.js"></script>
+    <script src="Scripts/Services/authService.js"></script>
+    <script src="Scripts/Interceptors/AuthInterceptor.js"></script>
+    <script src="Scripts/tuServicioApp.js"></script>
 </head>
 <html>
 <body ng-app="tuServicioApp">
     <div class="mdl-layout--fixed-header" ng-controller="authController as controller">
         <header class="mdl-layout__header nav-bar">
             <div class="mdl-layout__header-row">
-                <img src="../../Content/Img/logo_white.svg" />
+                <img src="Content/Img/logo_white.svg" />
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation">
                     <button ng-show="controller.userAuthenticated();" class="mdl-button mdl-js-button menu-button" id="user-menu">
-                        Nicolas Castano <!--REEMPLAZAR POR DATOS SEGUN EL USUARIO LOGUEADO-->
+                        {{controller.getUser()}}
                     </button>
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu">
                         <li class="mdl-menu__item menu-item">
@@ -80,7 +81,7 @@
                         <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">
                             <a href="#" class="fav-link">
                                 <div class="mdl-cell--4-col-desktop mdl-cell--1-col-phone mdl-cell--3-col-tablet nav-tiles">
-                                    <img src="../../Content/Mockup_img/washer.jpg" class="tile" />
+                                    <img src="Content/Mockup_img/washer.jpg" class="tile" />
                                 </div>
                                 <div class="mdl-cell--9-col-desktop mdl-cell--3-col-phone mdl-cell--6-col-tablet nav-content">
                                     <p class="fav-title">A presupuestar</p>
@@ -93,7 +94,7 @@
                         <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">
                             <a href="#" class="fav-link">
                                 <div class="mdl-cell--4-col mdl-cell--1-col-phone mdl-cell--3-col-tablet nav-tiles">
-                                    <img src="../../Content/Mockup_img/airconditioner.JPG" class="tile" />
+                                    <img src="Content/Mockup_img/airconditioner.JPG" class="tile" />
                                 </div>
                                 <div class="mdl-cell--9-col mdl-cell--3-col-phone mdl-cell--6-col-tablet nav-content">
                                     <p class="fav-title">Desde $1500</p>
