@@ -17,7 +17,7 @@ var loginApp;
             });
         }
         return Config;
-    }());
+    })();
     loginApp.Config = Config;
     var loginController = (function () {
         function loginController($http) {
@@ -32,7 +32,7 @@ var loginApp;
             });
         };
         return loginController;
-    }());
+    })();
     loginApp.loginController = loginController;
 })(loginApp || (loginApp = {}));
 var app = angular.module("loginApp", ['ngRoute']);

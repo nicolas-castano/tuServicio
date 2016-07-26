@@ -20,7 +20,7 @@ var tuServicioApp;
             });
         }
         return Config;
-    }());
+    })();
     tuServicioApp.Config = Config;
 })(tuServicioApp || (tuServicioApp = {}));
 var app = angular.module("tuServicioApp", ['ngRoute']);
@@ -30,4 +30,14 @@ app.config(tuServicioApp.Config);
 authService.authService.$inject = ['$http'];
 authModule.authController.$inject = ['$scope', '$location', 'authService'];
 app.controller('authController', authModule.authController);
+//-------Funcion para activar y desactivar botones--------
+$(".interactive-button").click(function () {
+    $(this).toggleClass('active-button');
+});
+//-------Funcion para mostrar tab activa--------
+var clickedTab = $(".tab > .active-button");
+$(".tab > a").click(function () {
+    $(".tab > a").removeClass("active-button");
+    $(this).addClass("active-button");
+});
 //# sourceMappingURL=tuServicioApp.js.map

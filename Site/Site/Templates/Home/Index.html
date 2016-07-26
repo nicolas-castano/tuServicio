@@ -28,10 +28,12 @@
             <div class="mdl-layout__header-row">
                 <img src="../../Content/Img/logo_white.svg" />
                 <div class="mdl-layout-spacer"></div>
-                <nav class="mdl-navigation">
-                    <button ng-show="controller.userAuthenticated();" class="mdl-button mdl-js-button menu-button" id="user-menu">
-                        Nicolas Castano <!--REEMPLAZAR POR DATOS SEGUN EL USUARIO LOGUEADO-->
-                    </button>
+                <nav class="mdl-cell--7-col mdl-navigation">
+                    <div class="mdl-cell--12-col menu-button-container">
+                        <a ng-show="controller.userAuthenticated();" class="menu-button" id="user-menu">
+                            Bienvenido Nicolas Castano <!--REEMPLAZAR POR DATOS SEGUN EL USUARIO LOGUEADO-->
+                        </a>
+                    </div>
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu">
                         <li class="mdl-menu__item menu-item">
                             <a href="#">
@@ -50,7 +52,7 @@
                     <ul class="notification mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                         for="notifications">
                         <!--/////////////////////////// MOCKUPS DE NOTIFICACIONES //////////////////////////-->
-                        <li class="mdl-menu__item mdl-menu__item--full-bleed-divider unread">
+                        <li class="mdl-menu__item mdl-menu__item--full-bleed-divider unreaded">
                             <a href="#" class="fav-link">
                                 <div class="mdl-cell--12-col nav-content">
                                     <p class="fav-title">Respondieron a tu pregunta</p>
@@ -109,25 +111,29 @@
         </header>
         <div class="fixed-lateral-nav">
             <ul>
-                <li class="tab active-section">
-                    <a href="#home" class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="home">
+                <li class="tab">
+                    <a href="#home" class="mdl-button mdl-js-button mdl-button--icon lateral-btn active-button" id="home">
                         <i class="material-icons">home</i>
                     </a>
+                    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--right hide-on-mobile" for="home">Inicio</div>
                 </li>
                 <li class="tab">
-                    <button class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="home">
+                    <a href="#home" class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="shop">
                         <i class="material-icons">shopping_cart</i>
-                    </button>
+                    </a>
+                    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--right hide-on-mobile" for="shop">Mis compras</div>
                 </li>
                 <li class="tab">
-                    <button class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="home">
+                    <a href="#home" class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="sell">
                         <i class="material-icons">local_offer</i>
-                    </button>
+                    </a>
+                    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--right hide-on-mobile" for="sell">Mis ventas</div>
                 </li>
                 <li class="tab">
-                    <a href="#login" class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="home">
+                    <a href="#login" class="mdl-button mdl-js-button mdl-button--icon lateral-btn" id="user">
                         <i class="material-icons">person</i>
                     </a>
+                    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--right hide-on-mobile" for="user">Mis datos</div>
                 </li>
             </ul>
         </div>
