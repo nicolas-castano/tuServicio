@@ -13,7 +13,7 @@ namespace QuantumFactory.tuServicio.Site.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            Audience newAudience = AudiencesStore.AddAudience("pedro el escamoso");
+            Audience newAudience = AudiencesStore.AddAudience(model.Email);
             return Ok(newAudience);
         }
     }

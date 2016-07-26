@@ -23,12 +23,8 @@ namespace QuantumFactory.tuServicio.Site
         public static Audience FindAudience(string clientId)
         {
             Audience audience = null;
-            if (AudiencesList.TryGetValue(clientId, out audience))
-            {
-                return audience;
-            }
-
-            return null;
+            AudiencesList.TryGetValue(clientId, out audience);
+            return audience;
         }
     }
 }

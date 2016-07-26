@@ -8,7 +8,8 @@ module authModule {
         }
 
         login() {
-            this.$service.login(this.username, this.password);
+            // next step remove this call, call signin method
+            this.$service.signUp(this.username, this.password);
             this.$location.url('/home');
         }
 
@@ -18,6 +19,10 @@ module authModule {
 
         public userAuthenticated() {
             return this.$service.userAuthenticated();
+        }
+
+        public getUser() {
+            return this.$service.userName;
         }
     }
 }

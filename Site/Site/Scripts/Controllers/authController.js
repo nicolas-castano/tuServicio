@@ -8,7 +8,8 @@ var authModule;
             this.$service = $service;
         }
         authController.prototype.login = function () {
-            this.$service.login(this.username, this.password);
+            // next step remove this call, call signin method
+            this.$service.signUp(this.username, this.password);
             this.$location.url('/home');
         };
         authController.prototype.logoff = function () {
@@ -16,6 +17,9 @@ var authModule;
         };
         authController.prototype.userAuthenticated = function () {
             return this.$service.userAuthenticated();
+        };
+        authController.prototype.getUser = function () {
+            return this.$service.userName;
         };
         return authController;
     })();
