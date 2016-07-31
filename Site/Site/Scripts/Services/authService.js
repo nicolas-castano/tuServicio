@@ -21,7 +21,7 @@ var authService;
             if (clientId)
                 data = data + "&client_id=" + clientId;
             var deferred = this.$q.defer();
-            this.$http.post('token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).
+            this.$http.post('../../token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).
                 success(function (response) {
                 localStorage.setItem('token', response.access_token);
                 //this.isAuthenticated = true;
@@ -35,7 +35,7 @@ var authService;
         };
         authService.prototype.signUp = function (userName, password) {
             var _this = this;
-            this.$http.post('api/account/Authenticate', { Email: userName, Password: password })
+            this.$http.post('../../api/account/Authenticate', { Email: userName, Password: password })
                 .success(function (response) {
                 localStorage.setItem('client_id', response.ClientId);
                 // next step remove this call

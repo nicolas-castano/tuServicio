@@ -16,7 +16,7 @@ var authModule;
             return config;
         };
         return AuthInterceptor;
-    }());
+    })();
     authModule.AuthInterceptor = AuthInterceptor;
 })(authModule || (authModule = {}));
 //# sourceMappingURL=AuthInterceptor.js.map
