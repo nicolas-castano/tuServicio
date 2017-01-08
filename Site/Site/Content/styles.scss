@@ -12,12 +12,15 @@ body,p,h1,h2,h3,h4,h5,h6{
 span{
     font-size: 0.9rem;
 }
+
+a:focus{
+    outline: none;
+}
 /*///////////////// END TAGS STYLES /////////////////*/
 
 /*///////////////// START LOGIN-REGISTER-RESET STYLES /////////////////*/
 .red-bkg {
     background-color: $primary-color;
-    margin-top: 5%;
     text-align: center;
     color: white;
 
@@ -100,17 +103,12 @@ span{
 
 .nav-bar {
     .material-icons {
-        color: rgba(0,0,0,.5);
+        color: rgba(0, 0, 0,.5);
     }
 
     .mdl-navigation{
         .mdl-button{
              margin: 1.5rem;
-        }
-
-        .mdl-menu__container{
-            top: 55px !important;
-            right: 181px !important;
         }
 
         /*Flecha del contenedor*/
@@ -155,6 +153,11 @@ span{
                 line-height: normal;
             }
         }
+    }
+
+    .menu-button-container{
+        margin-right: 5%;
+        text-align: right;
     }
 
     .favorites{
@@ -218,28 +221,6 @@ span{
                 i{
                     color: rgba(68,89,99,.6);
                 }
-
-                span{
-                    display: none;
-                }
-            }
-        }
-
-        /*////////// ACTIVE-SECTION Y LOS ESTILOS QUE ABARCA SOLO DEBEN APLICARSE CUANDO LA PESTAÑA ESTA ACTIVA /////////////*/
-        .active-section{
-            .lateral-btn{
-                color: $primary-color;
-
-                i{
-                    color: $primary-color;
-                    top: 35%;
-                }
-
-                span{
-                    font-size: 0.8rem;
-                    display: block;
-                    margin-top: 20px;
-                }
             }
         }
     }
@@ -260,7 +241,7 @@ span{
     width: 100%;
 }
 
-.unread{
+.unreaded{
     background-color: lighten($accent-color, 25%);
 }
 
@@ -293,13 +274,13 @@ span{
 
 .menu-button{
     color: white;
+    cursor: pointer;
+    font-weight: 400;
+}
 
-    &:hover{
-        background-color: rgba(167,14,44,0.2);
-    }
-
-    &:active{
-        background-color: rgba(167,14,44,0.5);
+.active-button{
+    i{
+        color: $primary-color !important;
     }
 }
 /*///////////////// END GENERIC STYLES /////////////////*/
@@ -436,10 +417,6 @@ span{
 
                 &:focus{
                     outline: none;
-                }
-
-                &:hover{
-                    color: $primary-color;
                 }
             }
 
