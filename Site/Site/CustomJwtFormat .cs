@@ -1,10 +1,7 @@
 ﻿using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataHandler.Encoder;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens;
-using System.Linq;
-using System.Web;
 using Thinktecture.IdentityModel.Tokens;
 
 namespace QuantumFactory.tuServicio.Site

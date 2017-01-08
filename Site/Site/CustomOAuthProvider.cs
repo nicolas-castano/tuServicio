@@ -47,7 +47,7 @@ namespace QuantumFactory.tuServicio.Site
             //    return Task.FromResult<object>(null);
             //}
 
-            var identity = new ClaimsIdentity("JWT");
+            var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
             var props = new AuthenticationProperties(new Dictionary<string, string>
                 {

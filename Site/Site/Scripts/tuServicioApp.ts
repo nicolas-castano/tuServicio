@@ -8,19 +8,19 @@ module tuServicioApp {
             });*/
 
             $routeProvider.when('/forgot', {
-                templateUrl: 'Views/Account/resetPassword.html',
+                templateUrl: '../../Views/Account/resetPassword.html',
             }).when('/register',
                 {
-                    templateUrl: 'Views/Account/register.html',
+                    templateUrl: '../../Views/Account/register.html',
                 }).when('/home',
                 {
-                    templateUrl: 'Views/Home/home.html',
+                    templateUrl: '../../Views/Home/home.html',
                 }).when('/login',
                 {
-                    templateUrl: 'Views/Account/login.html',
+                    templateUrl: '../../Views/Account/login.html',
                 }).otherwise(
                 {
-                    templateUrl: 'Views/Home/home.html',
+                    templateUrl: '../../Views/Home/home.html',
                 }
                 );
 

@@ -4,7 +4,6 @@ using Microsoft.Owin.Security.DataHandler.Encoder;
 using Microsoft.Owin.Security.Jwt;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using System.Threading;
 using System.Web.Http;
 
 [assembly: OwinStartup(typeof(QuantumFactory.tuServicio.Site.Startup))]

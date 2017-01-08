@@ -16,5 +16,12 @@ namespace QuantumFactory.tuServicio.Site.Controllers
             Audience newAudience = AudiencesStore.AddAudience(model.Email);
             return Ok(newAudience);
         }
+
+        [Authorize]
+        [HttpGet]
+        public IHttpActionResult Oki()
+        {
+            return Ok();
+        }
     }
 }
